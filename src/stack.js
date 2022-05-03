@@ -11,5 +11,5 @@ exports.pop = () => {
 }
 
 exports.peek = () => {
-  return stack[0]
+  return _.last(stack)
 }
