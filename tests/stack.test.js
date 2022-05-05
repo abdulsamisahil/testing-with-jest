@@ -17,3 +17,13 @@ test('peek on stack with two or more elements returns the top element', () => {
   expect(stack.peek()).toBeDefined()
   expect(stack.peek()).toBe(42)
 })
+
+//Enhetstest på stack.js pop till uppgift 5
+test('pop on stack with three or more elements removes the top and returns the same element, later with peek we expect to see the next top element', () => {
+  stack.push('sami')
+  stack.push('martin')
+  stack.push(8601)
+
+  expect(stack.pop()).toBe(8601)
+  expect(stack.peek()).toBe('martin')
+})
