@@ -1,16 +1,16 @@
 const { Builder, By, until } = require('selenium-webdriver')
-require('geckodriver')
+require('chromedriver')
 
 const fileUnderTest =
   'file://' + __dirname.replace(/ /g, '%20') + '/../dist/index.html'
 const defaultTimeout = 10000
 let driver
-jasmine.DEFAULT_TIMEOUT_INTERVAL = 1000 * 60 * 5 // 5 minuter
+//jasmine.DEFAULT_TIMEOUT_INTERVAL = 1000 * 60 * 5 // 5 minuter
 
 // Det här körs innan vi kör testerna för att säkerställa att Firefox är igång
 beforeAll(async () => {
   console.log(fileUnderTest)
-  driver = await new Builder().forBrowser('firefox').build()
+  driver = await new Builder().forBrowser('chrome').build()
   await driver.get(fileUnderTest)
 })
 
