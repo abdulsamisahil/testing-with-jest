@@ -7,7 +7,7 @@ window.onload = () => {
   const push = document.querySelector('#push')
   const peek = document.querySelector('#peek')
   const display = document.querySelector('#top_of_stack')
-
+ 
   pop.addEventListener('click', () => {
     const text = 'Tog bort ' + stack.pop()
 
